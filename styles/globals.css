@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  body {
+    @apply antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-khand-headers;
+  }
+
+  header li {
+    @apply font-exo-nav;
+  }
+
+  p {
+    @apply font-duru-sans;
+  }
+
+  * {
+    transition: all ease 0.1s !important;
+  }
+
+  .hover-underline-animation-wrapper .hover-underline-animation-element:after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 26px;
+    left: 0;
+    background-color: #ce061e;
+    transform-origin: center;
+    transition: transform 0.15s ease-out;
+  }
+
+  .hover-underline-animation-wrapper:hover .hover-underline-animation-element:after {
+    transform: scaleX(1.3);
+    transform-origin: center;
+  }
+
+  .title-underline-animation-wrapper h3>span {
+    background-image: linear-gradient(120deg, #ce061e 0%, #ce061e 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0em;
+    background-position: 0 82%;
+    transition: background-size 0.1s ease-in;
+  }
+
+  .title-underline-animation-wrapper:hover h3>span {
+    background-size: 100% 10%;
+  }
+
+  #nprogress .bar {
+    @apply bg-main;
+  }
+
+  #nprogress .spinner-icon {
+    @apply border-main border-t border-l;
+  }
+
+  .author-description a {
+    color: #ce061e;
+  }
+}
+
+.main-article h2 {
+  font-weight: bold;
+  font-family: Khand;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 24px !important;
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .main-article h2 {
+    font-size: 27px !important;
+  }
+}
+
+.main-article h3 {
+  font-size: 24px !important;
+}
+
+.main-article h4 {
+  font-size: 21px !important;
+}
+
+.main-article h5 {
+  font-size: 18px !important;
+}
+
+.main-article .wp-block-embed__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main-article li {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-family: Gudea;
+}
+
+.main-article p {
+  margin-bottom: 26px;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.main-article blockquote:not(.twitter-tweet) {
+  margin: 40px 5% 38px;
+}
+
+.main-article blockquote:not(.twitter-tweet)>p {
+  color: #666;
+  padding: 15px 20px 15px 20px;
+  border-left: 2px solid #ce061e;
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px #ccc;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.main-article p a {
+  color: #ce061e;
+}
+
+.main-article .has-background {
+  background-color: #ececec;
+}
+
+.main-article ul {
+  list-style-type: disc;
+}
+
+.main-article figure {
+  border-radius: 3px;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.main-article figcaption {
+  font-size: 10px;
+  color: #888;
+  margin-top: 3px;
+}
+
+.main-article iframe {
+  width: 100%;
+  min-height: 100%;
+}
+
+.main-article .wp-embed-aspect-16-9>.wp-block-embed__wrapper,
+.yt-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+}
+
+.main-article .wp-embed-aspect-16-9 iframe,
+.yt-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*::-webkit-scrollbar {
+  background: #e4e4e4;
+  width: 9px;
+  display: none;
+}
+
+
+*::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  background-color: #e4e4e4;
+  background-color: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.newsPage::-webkit-scrollbar {
+  display: none !important;
+}
+
+.wp-block-quote {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+  color: inherit !important;
+}
+
+a.twitter-timeline {
+  /* Buttonish */
+  display: inline-block;
+  padding: 6px 12px 6px 30px;
+  margin: 10px 0;
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  background-size: 1em 1em;
+
+  /* Text */
+  font: normal 12px/18px Helvetica, Arial, sans-serif;
+  color: #333;
+  white-space: nowrap;
+}
+
+.small p {
+  font-size: 17px;
+  line-height: 33px;
+
+}

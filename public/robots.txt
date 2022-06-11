@@ -1,0 +1,14 @@
+User-Agent: Googlebot-news
+Allow: /news/
+Allow: /match-card/
+Allow: /results/
+Allow: /rumor-round-up/
+Allow: /rumors/
+Allow: /lists/
+Sitemap: https://wrestlingworld.co/sitemap-news.xml
+
+User-Agent: *
+Disallow: /wp-admin/
+Disallow: /tag/
+
+Sitemap: https://wrestlingworld.co/sitemap_index.xml
